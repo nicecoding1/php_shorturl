@@ -1,0 +1,11 @@
+CREATE TABLE `short_url` (
+  `no` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `short_url` varchar(20) DEFAULT NULL,
+  `long_url` varchar(200) DEFAULT NULL,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `ins_dt` datetime DEFAULT NULL,
+  PRIMARY KEY (`no`),
+  UNIQUE KEY `Index1` (`short_url`),
+  UNIQUE KEY `Index2` (`long_url`),
+  KEY `Index3` (`short_url`,`long_url`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
